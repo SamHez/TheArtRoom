@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<%=render template: "pages/img_hero" %>
+<div class="container margin-bottom " >
+<h1>Explore Art Pieces</h1>
+
+<% @welcomes.in_groups_of(3) do |group| %>
+  <div class="row">
+    <% group.compact.each do |welcome| %>
+      <div class="col-md-4 ">
+       <%= image_tag welcome.picture_url, width: '100%' if welcome.picture.present? link_to welcome.name%>
+        <h4> welcome </h4>
+        <%= welcome.description %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<br>
+</div>
+
+<%= link_to 'New Welcome', new_welcome_path %>

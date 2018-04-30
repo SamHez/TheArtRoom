@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheArtRoom Kampala</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Montserrat" rel="stylesheet">
+    <!-- Bootsrap -->
+	 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+	 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="http://static1.squarespace.com/static/564e7a9fe4b06970c6919354/t/564e86a4e4b0172ec381e492/1524740018716/?format=1500w" style="max-width: 120px;"></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Add Artpiece', new_welcome_path %></li>
+        <li><a href="/pages/about">About Us</a></li>
+        <li><a href="/">Explore</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+  
+    
+  		<%= yield %>
+
+
+	<!--<footer>
+  <div class="container">
+    <img src="http://static1.squarespace.com/static/564e7a9fe4b06970c6919354/t/564e86a4e4b0172ec381e492/1524740018716/?format=1500w" style="max-width: 120px;"> <%= Time.now.year %>
+    <p>Developed with <i class="fa fa-heart"></i> by <a href="http://samhez.com">Samuel Epodoi</a></p>
+  </div>
+	</footer>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.js"></script>
+  </body>
+</html>

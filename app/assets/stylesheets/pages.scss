@@ -1,0 +1,71 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.about-text p{
+	font-size: 15px;
+	line-height: 29px;
+	color: #111111;
+	font-weight: 400;
+	font-family: Libre Franklin;
+	margin-top: 2%;
+}
+.about-text h1{
+	margin-top: 100px;
+	line-height: 55px;
+	color: #111111;
+	font-family: montserrat;
+}
+.img-about{
+	position: relative;
+    height: 300px;
+    background-color: #999;
+    background-position: 50%;
+    background-size: cover;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+//Hero Image Start
+
+.img-hero{
+	position: relative;
+	width: 100%;
+    background-color: #999;
+    background-position: 50%;
+    background-size: cover;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+    font-family: Libre Franklin;
+    padding-bottom: 80px;
+    height: 420px;
+    
+
+}
+.content-hero{
+	position: relative;
+	padding-top: 100px;	
+	z-index: 2;
+}
+.img-hero h1{
+	font-size: 46px;
+	font-family: Libre Franklin;
+}
+.img-hero p{
+	font-size: 18px;
+	line-height: 29px;
+	font-family: montserrat;
+	padding-bottom: 20px;
+}
+.overlay{
+	position: absolute;
+	background: rgba(0, 0, 0, .6);
+	opacity: 0.6;
+	z-index: 1;
+	display: block;
+	width: 100%;
+    height: 100%;
+
+}
+.blog-masonary {
+	position: absolute;
+}

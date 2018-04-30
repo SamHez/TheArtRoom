@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container top-margin">
+<div class="row">
+  <div class="col-md-9">
+    <%= image_tag(@welcome.picture_url, width: 600) if @welcome.picture.present? %>
+  </div>
+
+  <div class="col-md-3">
+    <p><b>Name: </b><%= @welcome.name %></p>
+    <p><b>Description: </b><%= @welcome.description %></p>
+    <p>
+      <%= link_to 'Edit', edit_welcome_path(@welcome) %> |
+      <%= link_to 'Destroy', @welcome, data: { confirm: 'Are you sure?' }, method: :delete %> |
+      <%= link_to 'Back', welcomes_path %>
+    </p>
+  </div>
+</div>
+</div>
