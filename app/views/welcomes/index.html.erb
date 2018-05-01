@@ -6,7 +6,7 @@
 <% @welcomes.in_groups_of(3) do |group| %>
   <div class="row">
     <% group.compact.each do |welcome| %>
-      <div class="col-md-4 ">
+      <a href="../pages/linkto.html.erb"><div class="col-md-4">
       	<div class="img-artpiece">
 	      <div class="image"> 
 	      	<%= image_tag welcome.picture_url, width: '100%' if welcome.picture.present? %>	
@@ -19,7 +19,7 @@
 
 	    </div>
 
-      </div>
+      </div></a>
     <% end %>
   </div>
 <% end %>

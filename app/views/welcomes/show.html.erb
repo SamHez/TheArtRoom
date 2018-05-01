@@ -1,19 +1,36 @@
 <p id="notice"><%= notice %></p>
+<div class="show-details">
+  <div class="container">
+    <div class="row">
+      <center><div class="col-md-5 arpiece-image img-responsive">
+        <%= image_tag(@welcome.picture_url, height: 500) if @welcome.picture.present? %>
+      </div></center>
 
-<div class="container top-margin">
-<div class="row">
-  <div class="col-md-9">
-    <%= image_tag(@welcome.picture_url, width: 600) if @welcome.picture.present? %>
+      <div class="col-md-7 arpiece-details">
+        <h3><%= @welcome.name %></h3>
+        <hr>
+        <p><%= @welcome.description %></p>
+        <br>
+        
+        <p></p>
+
+        <p>
+          <%= link_to 'Edit', edit_welcome_path(@welcome) %> |
+          <%= link_to 'Destroy', @welcome, data: { confirm: 'Are you sure?' }, method: :delete %> |
+        </p>
+        <h4>Size: 10cm<small>width</small> x 20cm<small>height</small></h4>
+        <h4>Price: </h4>
+        <br>
+        <h5><i class="fa fa-home"></i> Get It Delivered to your doorstep</h5>
+        <h5><i class="fa fa-lock"></i> Safe &amp; Secure</h5>
+        <h5><i class="fa fa-money"></i> Pay On Delivery</h5>
+
+        <button class="btn btn-primary">Order Now<i class="fa fa-rocket"></i></button>
+        <br>
+        <h4><i class="fa fa-arrow-left"></i> <%= link_to 'Back', welcomes_path %></h4>
+      </div>
+    </div>
+    
   </div>
 
-  <div class="col-md-3">
-    <p><b>Name: </b><%= @welcome.name %></p>
-    <p><b>Description: </b><%= @welcome.description %></p>
-    <p>
-      <%= link_to 'Edit', edit_welcome_path(@welcome) %> |
-      <%= link_to 'Destroy', @welcome, data: { confirm: 'Are you sure?' }, method: :delete %> |
-      <%= link_to 'Back', welcomes_path %>
-    </p>
-  </div>
-</div>
 </div>
