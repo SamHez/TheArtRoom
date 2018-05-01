@@ -7,9 +7,18 @@
   <div class="row">
     <% group.compact.each do |welcome| %>
       <div class="col-md-4 ">
-       <%= image_tag welcome.picture_url, width: '100%' if welcome.picture.present? %>
-        <h4> welcome </h4>
-        <%= welcome.description %>
+      	<div class="img-artpiece">
+	      <div class="image"> 
+	      	<%= image_tag welcome.picture_url, width: '100%' if welcome.picture.present? %>	
+	      </div>
+
+		      <div class="artpiece-content">
+			       <h4><%= link_to welcome.name, welcome %></h4>
+			       <%= welcome.description %>
+		       </div>
+
+	    </div>
+
       </div>
     <% end %>
   </div>
@@ -18,4 +27,3 @@
 <br>
 </div>
 
-<%= link_to 'New Welcome', new_welcome_path %>
