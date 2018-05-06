@@ -2,7 +2,7 @@
 <div class="show-details">
   <div class="container">
     <div class="row">
-      <center><div class="col-md-5 arpiece-image img-responsive">
+      <center><div class="col-md-5 arpiece-image ">
         <%= image_tag(@welcome.picture_url, height: 500) if @welcome.picture.present? %>
       </div></center>
 
@@ -25,7 +25,99 @@
         <h5><i class="fa fa-lock"></i> Safe &amp; Secure</h5>
         <h5><i class="fa fa-money"></i> Pay On Delivery</h5>
 
-        <button class="btn btn-primary">Order Now<i class="fa fa-rocket"></i></button>
+        <button type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary" style="margin-bottom: 15px;">Order Now<i class="fa fa-rocket"></i></button>
+
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" data-toggle="modal" data-target="#exampleModalCenter" >
+                  
+                      <b>Pay Cash On Delivery</b>
+                  
+                </div>
+                <div class="form-check disabled">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                  
+                    Pay Via Mobile Money
+                 
+                </div>
+          </div>
+        </div>
+
+        
+
+        
+        <!-- Choose Delivery Location -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLongTitle">Please Choose A Delivery Point <i class="fa fa-map-pin"></i></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <form>
+              <div class="modal-body">
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter the delivery Address here!"></textarea>
+                  </div>
+                <br>
+                <h3 >Enter your details here</h3>
+                <hr>
+                <!-- User to input details -->
+                
+                      <input type="text" class="form-control" placeholder="Full Name">
+                      <br>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Telephone Number">
+                    </div>
+
+                    <div class="form-group">
+                      
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Email Address">
+                      <small id="emailHelp" class="form-text text-muted">We'll use this to send you a recipt.</small>
+                    </div>
+                    
+                </form>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter2" >Make Your Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+         <!-- Your Artpiece Is on the Way -->
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">Your Artpiece Is on the way!</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body text-center">
+                <img src="https://cdn.dribbble.com/users/803556/screenshots/3340807/dribbble-delivery.gif" style="max-height: 200px;">
+                <h4>Your Artpiece will be delivered to you within 24hours! <br>Call us incase of anything(0712345678)</h4>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times; Close</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
         <br>
         <h4><i class="fa fa-arrow-left"></i> <%= link_to 'Back', welcomes_path %></h4>
       </div>
